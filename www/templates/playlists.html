@@ -1,0 +1,21 @@
+<!--
+<ion-view view-title="Playlists">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+-->
+
+<ion-view view-title="Categories">
+  <ion-content id="submenu">
+    <ion-list>
+      <ion-item ng-repeat="categorias in categories" href="#/app/playlists/{{categorias.id}}" id="categoriItem">
+        {{categorias.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="Images" id="itemsbackground">
+    <ion-content>
+        <div class="list" ng-repeat="imagenes in Images">
+            <div class="item item-avatar">
+                <img src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+                <h2>{{imagenes.label}}</h2>
+                <p>
+                    {{imagenes.name}}
+                </p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+                <p>
+                    Some comments here....bla bla bla!!!!!
+                </p>
+                <p>
+                    <a href="#" class="subdued">1 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
+                <a class="tab-item" href="#"> <i class="icon ion-chatbox"></i> Comment </a>
+                <a class="tab-item" href="#"> <i class="icon ion-share"></i> Share </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

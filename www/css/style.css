@@ -1,0 +1,138 @@
+/* Empty. Ad your own CSS if you like */
+
+/* WRAPER */
+
+ion-view {
+	background-color:background: rgb(175, 175, 175);
+	background: -moz-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -webkit-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -o-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -ms-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: linear-gradient(183deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);	
+}
+
+#enterbutton {
+	position: absolute;
+	top: 570px;
+	margin: auto;
+	width: 150px;
+}
+#screen {
+	opacity: 0.7;
+}
+
+/* LOGIN PAGE */
+
+.logincont {
+	position: fixed;
+	margin: 170px 35px;
+	width: 300px;
+	height: 186px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 15px;	
+}
+#ionavatar {
+	position: absolute;
+	left: 180px;
+}
+.loginlabel {
+	top: 43px;
+}
+.loginbutton {
+	top: 33px;
+}
+
+
+
+
+/* MENU PAGE */
+
+#submenu {
+	background-color: #d2d1d1;
+}
+#menuheader {
+	background-color: #444;
+}
+#menuheader h1 {
+	color: white;
+}
+#menuitem a {
+	background-color: #646362;
+	color: white;
+}
+#categoriItem a {
+	background-color: #7e7c7b;
+	color: white;
+}
+
+
+
+/* HOME PAGE */
+
+.ionview {
+	background-color: #d2d1d1;
+}	
+#contlogo {
+	position: absolute;
+	top: 33%; 
+	left: 33%;
+	width: auto;
+	height: auto;
+	text-align: center;
+	margin: auto;
+}
+#contlogo p {
+	font-size: 2.5em;
+	color: #222;
+}
+#homeicon {
+	position: absolute;
+	left: 18%;
+}
+#settingsicon {
+	position: absolute;
+	left: 43%;
+}
+#logouticon {
+	position: absolute;
+	right: 18%;	
+}
+#fondo {
+ opacity: 0.3;
+}
+#ricon {
+	position: absolute;
+	right: 5px;
+}
+
+
+
+
+/* LIST THUMBNAILS PAGE */
+
+#ionitemcont {
+	padding-left: 12px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
+}
+#ionitemtext {
+	margin-top: 8px; 
+	padding: 4px;
+	background-color: #ebebeb;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
+}
+#thumbnailbackground {
+	background-color: #d2d1d1;
+}
+
+
+
+/* ITEMS PAGE */
+
+#itemsbackground {
+	background-color: #d2d1d1;
+}
