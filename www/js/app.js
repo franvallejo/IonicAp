@@ -29,12 +29,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.categories',
         templateUrl: "templates/homelogin.html",
         controller: "AppCtrl"
   })
-  
-  .state('login', {
-      url: "/login",
-      templateUrl: "templates/login.html",
-      controller: "loginCtrl"
-    })
     
   .state('app', {
     url: "/app",
@@ -52,17 +46,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.categories',
     }
   })
 
-/*
-  .state('app.browse', {
-    url: "/browse",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/browse.html"
-      }
-    }
-  })
-*/  
-
   .state('app.playlists', {
     url: "/playlists",
     views: {
@@ -74,7 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.categories',
   })
     
   .state('app.single', {
-    url: "/playlists/:category_id",
+    url: "/playlist/:category_id",
     views: {
       'menuContent': {
         templateUrl: "templates/playlist.html",
