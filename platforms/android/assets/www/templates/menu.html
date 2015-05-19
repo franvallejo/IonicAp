@@ -14,14 +14,17 @@
         </ion-header-bar>
         <ion-content>
             <ion-list>
-                <ion-item nav-clear menu-close href="#/app/home" id="menuitem">
+                <ion-item nav-clear menu-close ui-sref="app.home" id="menuitem">
                     Home
                 </ion-item>
-                <!--<ion-item nav-clear menu-close ng-click="login()">
-                Login
-                </ion-item>-->
-                <ion-item nav-clear menu-close href="#/app/playlists" id="menuitem">
+                <ion-item nav-clear menu-close ui-sref="app.categories" id="menuitem">
                     Categories
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.itemsList" id="menuitem">
+                    Items
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.edit" id="menuitem">
+                    Edit
                 </ion-item>
             </ion-list>
         </ion-content>

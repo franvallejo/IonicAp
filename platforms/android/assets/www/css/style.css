@@ -28,7 +28,7 @@ ion-view {
 	position: fixed;
 	margin: 170px 35px;
 	width: 300px;
-	height: 186px;
+	height: 180px;
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 15px;	
@@ -61,7 +61,7 @@ ion-view {
 	color: white;
 }
 #categoriItem a {
-	background-color: #7e7c7b;
+	background-color: #ebebeb;
 	color: white;
 }
 
@@ -121,6 +121,18 @@ ion-view {
 	-moz-border-radius: 7px;
 	border-radius: 7px;	
 }
+#ionitemtext_category {
+	position: relative;
+	float: left;
+	margin-top: -90px; 
+	padding: 4px;
+	width: 250px;
+	margin-left: 100px;
+	background-color: #fff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
+}
 #thumbnailbackground {
 	background-color: #d2d1d1;
 }
@@ -130,4 +142,29 @@ ion-view {
 
 #itemsbackground {
 	background-color: #d2d1d1;
+}
+
+
+
+
+
+
+
+
+#tabs {
+	margin-top: 50px;
+}
+#addButton {
+	margin-top: 1px;
+}
+#formularioNew {
+	background-color: white;
+}
+#buttonsCont {
+	float: right;
+}
+#buttonsCont button {
+	margin-left: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
 }

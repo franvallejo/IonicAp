@@ -1,17 +1,17 @@
-<ion-view view-title="Images" id="itemsbackground">
+<ion-view view-title="{{itemName}}" id="itemsbackground">
     <ion-content>
         <div class="list" ng-repeat="imagenes in Imagenes">
             <div class="item item-avatar">
-                <img src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+                <img src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
                 <h2>{{imagenes.label}}</h2>
                 <p>
                     {{imagenes.name}}
                 </p>
             </div>
             <div class="item item-body">
-                <img class="full-image" src="http://www.planificaciondeportiva.es/{{ imagenes.uri }}">
+                <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
                 <p>
-                    Some comments here....bla bla bla!!!!!
+                    {{itemDesc}}
                 </p>
                 <p>
                     <a href="#" class="subdued">1 Like</a>
@@ -24,5 +24,43 @@
                 <a class="tab-item" href="#"> <i class="icon ion-share"></i> Share </a>
             </div>
         </div>
+    </ion-content>
+</ion-view>
+
+
+
+<!--
+<ion-view view-title="{{itemName}}" id="itemsbackground">
+    <ion-content>
+        <ion-list>
+            <div class="list">
+                <div class="item item-avatar">
+                    <img src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
+                    <h2>{{imagenes.label}}</h2>
+                    <p>
+                        {{imagenes.name}}
+                    </p>
+                </div>
+                <div class="item item-body">
+                    <ion-scroll direction="x" class="item-horizontal-scroll">
+                        <div class="div-inline" ng-repeat="imagenes in Imagenes">
+                            <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
+                        </div>
+                    </ion-scroll>
+                    <p>
+                        {{itemDesc}}
+                    </p>
+                    <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                    </p>
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
+                    <a class="tab-item" href="#"> <i class="icon ion-chatbox"></i> Comment </a>
+                    <a class="tab-item" href="#"> <i class="icon ion-share"></i> Share </a>
+                </div>
+            </div>
+        </ion-list>
     </ion-content>
 </ion-view>

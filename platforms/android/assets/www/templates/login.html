@@ -4,11 +4,11 @@
         <i class="icon ion-ionic" id="ionavatar"></i>
     </ion-header-bar>
     <ion-view view-title ="Sign-In">
-        <label class="item item-input loginlabel"> <span class="input-label">User</span>
-            <input type="text" ng-model="user.username">
+        <label class="item item-input loginlabel">
+            <input type="text" placeholder="Username" ng-model="user.username">
         </label>
-        <label class="item item-input loginlabel"> <span class="input-label">Pass</span>
-            <input type="password" ng-model="user.password">
+        <label class="item item-input loginlabel">
+            <input type="password" placeholder="Password"ng-model="user.password">
         </label>
         <button class="button button-block button-dark loginbutton" ng-click="closeLogin()">
             Sign-In

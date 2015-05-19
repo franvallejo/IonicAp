@@ -1,0 +1,92 @@
+<ion-view view-title="Edit">
+<img id="fondo" src="img/fondo.jpg">
+<div id="contlogo">
+        <img id="logoionic" src="img/ionic.png">
+        <p>
+            IonicAp
+        </p>
+    </div>
+<ion-content>
+<div class="tabs-background-dark tabs-color-light" id="tabs">
+<div class="tabs">
+  <a ng-click="gotoEditCategories()" class="tab-item">
+    Categories
+  </a>
+  <a ng-click="gotoEditItems()" class="tab-item">
+    Items
+  </a>
+</div>
+</div>
+</ion-content>
+</ion-view>
+
+
+<!--
+
+<ion-view view-title="Edit">
+<img id="fondo" src="img/fondo.jpg">
+<ion-content>
+<div class="tabs-striped tabs-top tabs-background-dark tabs-color-light tabs-icon-top" id="tabs">
+    <div class="tabs">
+      <a ng-click="gohome()" class="tab-item" href="#">
+        <i class="icon ion-image"></i>
+        Categories
+      </a>
+      <a ng-click="gohome()" class="tab-item" href="#">
+        <i class="icon ion-pricetags"></i>
+        Items
+      </a>
+    </div>
+  </div>
+</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ion-view view-title="Edit">
+    <ion-tabs class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+        <ion-tab title="Categories" ui-sref="editCategories.index">         
+            <ion-nav-view name="categories"></ion-nav-view>
+        </ion-tab
+        <ion-tab title="Items" ui-sref="editCategories.index">
+            <ion-nav-view name="itemContent"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>
+
+
+
+
+
+
+
+<ion-nav-bar class="bar-positive">
+<ion-nav-back-button class="button-clear">
+<i class="ion-arrow-left-c"></i> Back
+</ion-nav-back-button>
+</ion-nav-bar>
+<ion-tabs class="tabs-positive">
+
+<ion-tab icon="ion-home" ui-sref="home">
+<ion-nav-view name="home"></ion-nav-view>
+</ion-tab>
+
+<ion-tab icon="ion-film-marker" ui-sref="films">
+<ion-nav-view name="films"></ion-nav-view>
+</ion-tab>
+
+<ion-tab icon="ion-information" ui-sref="info">
+<ion-nav-view name="info"></ion-nav-view>
+</ion-tab>
+
+</ion-tabs>

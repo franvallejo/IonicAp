@@ -1,0 +1,25 @@
+<ion-view>
+<ion-content>
+<div class="list" id="formularioNew">
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Id</span>
+    <input ng-model="category.id" type="text" placeholder="Id here">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Name</span>
+    <input ng-model="category.name" type="text" placeholder="Name here">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Descrition</span>
+    <input ng-model="category.description" type="text" placeholder="Description here">
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Thumb</span>
+    <input ng-model="category.thumb" type="text" placeholder="Thumb here">
+  </label>
+</div>
+<button ng-click="addCategory()" class="button button-block button-dark" id="addButton">
+    Submit
+</button>
+</ion-content>
+</ion-view>

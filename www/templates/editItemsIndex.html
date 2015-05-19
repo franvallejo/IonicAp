@@ -1,0 +1,20 @@
+<ion-view>
+	<ion-content>
+		<button ng-click="gotoaddItem()" class="button button-block button-dark" id="addButton">
+		Add New Item
+		</button>
+		<ion-list>
+			<ion-item ng-repeat="item in items">
+				{{item.name}}
+				<!--div id="buttonsCont">
+					<button ui-sref="app.editCategoriesUpdate({id: categorias.id})" class="button button-small button-positive">
+						Edit
+					</button>
+					<button ng-click="deleteCategory(categorias)"class="button button-small button-assertive">
+						Delete
+					</button>
+				</div-->
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

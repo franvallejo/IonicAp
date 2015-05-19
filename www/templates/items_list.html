@@ -1,0 +1,12 @@
+<ion-view view-title="Items" id="thumbnailbackground">
+    <ion-content>
+            <ion-item class="item item-thumbnail-left" ng-repeat="item in items" ui-sref="app.images({item_id: item.id, item_name: item.name, item_description: item.description})" id="ionitemcont">
+                <img src="../img/ionicnail.png"/>
+                <div id="ionitemtext">
+                    <h2 class="positive">{{item.name}}</h2>
+                    <br>
+                    <small>ref:</small> {{item.id}}
+                </div>
+            </ion-item>
+    </ion-content>
+</ion-view>
