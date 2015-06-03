@@ -9,10 +9,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.config', 'ng
 	$ionicPlatform.ready(function() {
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
 		// for form inputs)
-		if (window.cordova && window.cordova.plugins.Keyboard) {
-			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-		}
-		if (window.StatusBar) {
+  if (window.cordova && window.cordova.plugins.Keyboard) {
+   cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+ }
+ if (window.StatusBar) {
 			// org.apache.cordova.statusbar required
 			StatusBar.styleDefault();
 		}
@@ -22,99 +22,99 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.config', 'ng
 .config(function($stateProvider, $urlRouterProvider) {
 	
   $stateProvider.state('homelogin', {
-		url : "/homelogin",
-		templateUrl : "templates/homelogin.html",
-		controller : "AppCtrl"
-	})
+    url : "/homelogin",
+    templateUrl : "templates/homelogin.html",
+    controller : "AppCtrl"
+  })
 
   .state('app', {
-		url : "/app",
-		abstract : true,
-		templateUrl : "templates/menu.html",
-		controller : 'homeCtrl'
-	})
+    url : "/app",
+    abstract : true,
+    templateUrl : "templates/menu.html",
+    controller : 'homeCtrl'
+  })
 
   .state('app.home', {
-		url : "/home",
-		views : {
-			'menuContent' : {
-				templateUrl : "templates/home.html"
-			}
-		}
-	})
+    url : "/home",
+    views : {
+     'menuContent' : {
+      templateUrl : "templates/home.html"
+    }
+  }
+})
 
   .state('app.categories', {
-		url : "/categories",
-		views : {
-			menuContent : {
-				templateUrl : "templates/categories.html",
-				controller : 'CategoryListCtrl'
-			}
-		}
-	})
+    url : "/categories",
+    views : {
+     menuContent : {
+      templateUrl : "templates/categories.html",
+      controller : 'CategoryListCtrl'
+    }
+  }
+})
 
   .state('app.items', {
-		url : "/:category_id/:category_name",
-		views : {
-			'menuContent' : {
-				templateUrl : "templates/items.html",
-				controller : 'ItemDetailCtrl'
-			}
-		}
-	})
+    url : "/:category_id/:category_name",
+    views : {
+     'menuContent' : {
+      templateUrl : "templates/items.html",
+      controller : 'ItemDetailCtrl'
+    }
+  }
+})
 
   .state('app.itemsList', {
-		url : "/:category_id/:category_name",
-		views : {
-			'menuContent' : {
-				templateUrl : "templates/items_list.html",
-				controller : 'ItemDetailCtrl'
-			}
-		}
-	})
+    url : "/:category_id/:category_name",
+    views : {
+     'menuContent' : {
+      templateUrl : "templates/items_list.html",
+      controller : 'ItemDetailCtrl'
+    }
+  }
+})
 
   .state('app.images', {
-		url : "/:item_id/:item_name/:item_description",
-		views : {
-			'menuContent' : {
-				templateUrl : "templates/images.html",
-				controller : 'ImageDetailCtrl'
-			}
-		}
-	})
+    url : "/:item_id/:item_name/:item_description",
+    views : {
+     'menuContent' : {
+      templateUrl : "templates/images.html",
+      controller : 'ImageDetailCtrl'
+    }
+  }
+})
 
   .state('app.edit', {
-		url : "/edit",
-		views : {
-			'menuContent' : {
-				templateUrl : "templates/edit.html",
-				controller : 'SelectTabCtrl'
-			}
-		}
-	})
+    url : "/edit",
+    views : {
+     'menuContent' : {
+      templateUrl : "templates/edit.html",
+      controller : 'SelectTabCtrl'
+    }
+  }
+})
 
   .state('app.editCategories', {
-		url : '/categories/edit',
+    url : '/categories/edit',
     views : {
       'menuContent' : {
         templateUrl : "templates/editCategoriesIndex.html",
         controller : 'CategoryListCtrl'
       }
     }
-	})
+  })
 
   .state('app.editCategoriesAdd', {
-		url : '/categories/add',
+    url : '/categories/add',
     views: {
       'menuContent': {
         templateUrl : "templates/addCategory.html",
         controller: 'AddCategoryCtrl'
       }
     }
-	})
+  })
 
   .state('app.editCategoriesUpdate', {
-    url : '/:id',
+    url : "/categories/update/:id/:name/:description",
     views: {
       'menuContent': {
         templateUrl : "templates/updateCategory.html",
@@ -143,59 +143,46 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.config', 'ng
     }
   })
 
-	/*
-	 .state('editCategories', {
-	 abstract: true,
-	 templateUrl: "templates/editCategories.html"
-	 })
+  .state('app.editItemsUpdate', {
+    url : '/items/update/:id/:name/:description/:category_id',
+    views: {
+      'menuContent': {
+        templateUrl : "templates/updateItem.html",
+        controller: 'UpdateItemCtrl'
+      }
+    }
+  })
 
-	 .state('editCategories.index', {
-	 templateUrl: "templates/editCategoriesIndex.html",
-	 controller: 'CategoryListCtrl'
-	 })
+  .state('app.upload', {
+    url : '',
+    views: {
+      'menuContent': {
+        templateUrl : "templates/upload.html",
+        controller: 'SelectTabCtrl'
+      }
+    }
+  })
 
-	 .state('editCategories.add', {
-	 templateUrl: "templates/editCategoriesAdd.html"
-	 })
+  .state('app.uploadFromCamera', {
+    url : '',
+    views: {
+      'menuContent': {
+        templateUrl : "templates/camera.html",
+        controller: 'UploadCtrl'
+      }
+    }
+  })
 
-	 
-  .state('home', {
-		url : '/',
-		views : {
-			home : {
-				templateUrl : 'home.html'
-			}
-		}
-	}).state('info', {
-		url : '/info',
-		views : {
-			info : {
-				templateUrl : 'info.html'
-			}
-		}
-	}).state('films', {
-		abstract : true,
-		url : '/films',
-		views : {
-			films : {
-				template : '<ion-nav-view></ion-nav-view>'
-			}
-		}
-	}).state('films.index', {
-		url : '',
-		templateUrl : 'films.html',
-		controller : 'FilmsCtrl'
-	}).state('films.detail', {
-		url : '/:film',
-		templateUrl : 'film.html',
-		controller : 'FilmCtrl',
-		resolve : {
-			film : function($stateParams, FilmsService) {
-				return FilmsService.getFilm($stateParams.film)
-			}
-		}
-	});
-*/
+  .state('app.uploadFromLibrary', {
+    url : '',
+    views: {
+      'menuContent': {
+        templateUrl : "templates/library.html",
+        controller: 'UploadCtrl'
+      }
+    }
+  })
+
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/homelogin');
 });

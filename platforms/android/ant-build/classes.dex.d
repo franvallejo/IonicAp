@@ -1,0 +1,27 @@
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes.dex : \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/R$drawable.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/CordovaApp.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/R$string.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/R.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/BuildConfig.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/R$xml.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionicframework/myapp906085/R$attr.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$3.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$2.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$1.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$1.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$4.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$7.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$6.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$3.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$6$1.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$5$1.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$2.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/classes/org/apache/cordova/splashscreen/SplashScreen$5.class \
+/home/fran/Escritorio/myApp/platforms/android/ant-build/dexedLibs/classes-9bab3fe3b577ea61c0611604e31afbf6.jar \

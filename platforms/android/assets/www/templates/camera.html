@@ -1,0 +1,26 @@
+<ion-view>
+<ion-content ng-controller="CameraCtrl">
+<div class="list" id="fromLibForm">
+	<label class="item item-input item-floating-label">
+		<span class="input-label">Name</span>
+		<input ng-model="itemDetails.name" type="text" placeholder="Name here">
+	</label>
+	<label class="item item-input item-select">
+		<div class="input-label">
+			Category
+		</div>
+		<select ng-model="data.category" ng-options="category as category.name for category in categories"></select>	  
+	</label>
+	<label class="item item-input item-floating-label">
+		<span class="input-label">Description</span>
+		<input ng-model="itemDetails.description" type="text" placeholder="Description here">
+	</label>
+</div>
+<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+<!--img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300"-->
+<i class="button button-stable icon ion-android-camera" ng-click="takePicture()" id="takePicButton">Take Picture</i>
+<button type="submit" ng-click="checkValidityItem(category)" class="button button-full button-dark">
+	Submit
+</button>
+</ion-content>
+</ion-view>

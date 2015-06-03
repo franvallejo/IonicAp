@@ -1,0 +1,14 @@
+<ion-view view-title="Categories">
+  <ion-content id="submenu">
+    <ion-list>
+      <ion-item ng-repeat="categorias in categories" ui-sref="app.items({category_id: categorias.id, category_name: categorias.name})" id="categoriItem"> 
+        <img src="../img/ionicnail.png"/>
+        <div id="ionitemtext_category">
+        <h2 class="positive">{{categorias.name}}</h2>
+        <br>
+        <p>{{categorias.items}} items</p>
+      </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

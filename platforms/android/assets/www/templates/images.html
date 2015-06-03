@@ -1,50 +1,24 @@
-<ion-view view-title="{{itemName}}" id="itemsbackground">
-    <ion-content>
-        <div class="list" ng-repeat="imagenes in Imagenes">
-            <div class="item item-avatar">
-                <img src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
-                <h2>{{imagenes.label}}</h2>
-                <p>
-                    {{imagenes.name}}
-                </p>
-            </div>
-            <div class="item item-body">
-                <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
-                <p>
-                    {{itemDesc}}
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-            <div class="item tabs tabs-secondary tabs-icon-left">
-                <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
-                <a class="tab-item" href="#"> <i class="icon ion-chatbox"></i> Comment </a>
-                <a class="tab-item" href="#"> <i class="icon ion-share"></i> Share </a>
-            </div>
-        </div>
-    </ion-content>
-</ion-view>
+<!-- 
+    code for slider... 
+    
+    comentar que el ng-repeat esta situado en la lista y deberia estar en ion-scroll por problemas con el origen de las imagenes 
+-->
 
-
-
-<!--
-<ion-view view-title="{{itemName}}" id="itemsbackground">
+<ion-view view-title="{{itemName}}" id="itemsbackground">      
     <ion-content>
         <ion-list>
-            <div class="list">
+            <div class="list" ng-repeat="imagen in Imagenes">
                 <div class="item item-avatar">
-                    <img src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
-                    <h2>{{imagenes.label}}</h2>
+                    <img src="http://www.planificaciondeportiva.es/{{imagen.uri}}">
+                    <h2>{{imagen.label}}</h2>
                     <p>
-                        {{imagenes.name}}
+                        {{imagen.name}}
                     </p>
                 </div>
                 <div class="item item-body">
                     <ion-scroll direction="x" class="item-horizontal-scroll">
-                        <div class="div-inline" ng-repeat="imagenes in Imagenes">
-                            <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagenes.uri}}">
+                        <div class="div-inline">
+                            <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagen.uri}}" ng-click="showFullscreen($index)">
                         </div>
                     </ion-scroll>
                     <p>
@@ -54,6 +28,9 @@
                         <a href="#" class="subdued">1 Like</a>
                         <a href="#" class="subdued">5 Comments</a>
                     </p>
+                    <button ng-click="deleteImage(imagen)"class="button button-small button-assertive" id="imageDeleteButton">
+                        Delete
+                    </button>
                 </div>
                 <div class="item tabs tabs-secondary tabs-icon-left">
                     <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
@@ -64,3 +41,39 @@
         </ion-list>
     </ion-content>
 </ion-view>
+
+
+
+<!-- OPTIONAL CODE WITHOUT SLIDER -->
+
+<!--ion-view view-title="{{itemName}}" id="itemsbackground">     
+    <ion-content>
+        <div class="list" ng-repeat="imagen in Imagenes">
+            <div class="item item-avatar">
+                <img src="http://www.planificaciondeportiva.es/{{imagen.uri}}">
+                <h2>{{imagen.label}}</h2>
+                <p>
+                    {{imagen.name}}
+                </p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" src="http://www.planificaciondeportiva.es/{{imagen.uri}}" ng-click="showFullscreen($index)">
+                <p>
+                    {{itemDesc}}
+                </p>
+                <p>
+                    <a href="#" class="subdued">1 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                </p>
+                <button ng-click="deleteImage(imagen)"class="button button-small button-assertive" id="imageDeleteButton">
+                        Delete
+                    </button>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#"> <i class="icon ion-thumbsup"></i> Like </a>
+                <a class="tab-item" href="#"> <i class="icon ion-chatbox"></i> Comment </a>
+                <a class="tab-item" href="#"> <i class="icon ion-share"></i> Share </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view-->

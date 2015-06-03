@@ -1,0 +1,7 @@
+<ion-modal-view class="modal-fullscreen" ng-click="closeModal()" on-swipe-left="forward(index)" on-swipe-right="backward(index)">
+  <button class="button icon ion-chevron-left" ng-click="backward(index)"></button>
+  <button class="button icon ion-chevron-right" ng-click="forward(index)"></button>
+  <div class="modal fullscreen-image transparent">
+    <img src="http://www.planificaciondeportiva.es/{{imagen.uri[index]}}" class="image-modal"/>
+  </div>
+</ion-modal-view>

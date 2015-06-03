@@ -1,0 +1,23 @@
+<ion-view>
+	<ion-content>
+		<div class="list" id="formularioNew">
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Name</span>
+				<input ng-model="itemDetails.name" type="text" placeholder="Name here">
+			</label>
+			<label class="item item-input item-select">
+				<div class="input-label">
+				Category
+				</div>
+				<select ng-model="itemDetails.category" ng-options="category as category.name for category in categories"></select>	  
+			</label>
+			<label class="item item-input item-floating-label">
+				<span class="input-label">Description</span>
+				<input ng-model="itemDetails.description" type="text" placeholder="Description here">
+			</label>
+		</div>
+		<button ng-click="updateItem(itemDetails.name, itemDetails.category, itemDetails.description)" class="button button-block button-dark" id="addButton">
+		Submit
+		</button>
+	</ion-content>
+</ion-view>

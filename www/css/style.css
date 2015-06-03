@@ -13,7 +13,7 @@ ion-view {
 
 #enterbutton {
 	position: absolute;
-	top: 570px;
+	top: 500px;
 	margin: auto;
 	width: 150px;
 }
@@ -48,7 +48,12 @@ ion-view {
 /* MENU PAGE */
 
 #submenu {
-	background-color: #d2d1d1;
+	background-color:background: rgb(175, 175, 175);
+	background: -moz-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -webkit-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -o-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: -ms-linear-gradient(93deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
+	background: linear-gradient(183deg, rgb(175, 175, 175) 0%, rgb(255, 255, 255) 100%);
 }
 #menuheader {
 	background-color: #444;
@@ -57,8 +62,8 @@ ion-view {
 	color: white;
 }
 #menuitem a {
-	background-color: #646362;
-	color: white;
+	background-color: white;
+	color: black;
 }
 #categoriItem a {
 	background-color: #ebebeb;
@@ -145,11 +150,7 @@ ion-view {
 }
 
 
-
-
-
-
-
+/* OTHER STYLES IN APP */
 
 #tabs {
 	margin-top: 50px;
@@ -167,4 +168,46 @@ ion-view {
 	margin-left: 25px;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+#takePicButton {
+	margin-left: 130px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+#imageDeleteButton {
+	float: right;
+	margin-top: -50px;
+}
+.file-upload{
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+}
+.file-upload input{
+	position: relative;
+	opacity: 0;
+	cursor: pointer;
+	width: 100%;
+	z-index: 1;
+	padding-top: 10px;
+	margin-top: 0px;
+}
+.file-upload i{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+	margin-top: 0;
+	padding: 0;
+}
+#save {
+	margin-top: 0px;
+}
+#fromLibForm {
+	margin-top: 0px;
+	background-color: white;
+}
+#libraryContent {
+	background-color: white;
 }

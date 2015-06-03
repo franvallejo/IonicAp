@@ -83,35 +83,69 @@ myApp.factory("Images", function(RESOURCES, $resource) {
 	});
 });
 
+myApp.service('fileUpload', ['$http', function ($http) {
+    /**
+     *
+     * @param file fichero a subir obtenido en el controlador
+     * @param uploadUrl URL de tratamiento del fichero de resources.config
+     * @param additionalData Objeto JSON con attributos del formulario (el objeto a guardar adicionalmente)
+     */
+    this.uploadFileToUrl = function(file, uploadUrl, additionalData){
+        //genero
+        var fd = new FormData();
+        fd.append('file', file);
+        if (additionalData!=null){
+            for (var key in additionalData) {
+                if (additionalData.hasOwnProperty(key)) {
+                    fd.append(key,additionalData[key]);
+                }
+            }
+        }
+        //Realizo un post a la url definida. Pendiente realización callbacks para subida correcta
+        $http.post(uploadUrl, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}, /* ASOTO it makes browser detect type of content type and set by the server to multipart*/
+        })
+            .success(function(){
+                console.log("Upload OK");
+            })
+            .error(function(data, status, headers, config){
+                console.log("Upload ERROR");
+            });
+    }
+}]);
 
-/*
-myApp.factory('FilmsService', function() {
-	var films = [{
-		title : "Captain Phillips",
-		details : "In telling the story of Capt. Richard Phillips (Tom Hanks), " + "whose cargo ship was boarded by Somali pirates in 2009, " + "director Paul Greengrass doesn't stop at gripping docudrama. " + "With Hanks digging deep into the origins of an everyman's courage, " + "the film raises the bar on action thrillers."
-	}, {
-		title : "American Hustle",
-		details : "Only that scrappy virtuoso David O. Russell could morph a film about " + "the Abscam political scandals of the late 1970s into a rollicking, " + "emotionally raw human drama. Russell regulars – Christian Bale and Amy Adams from The Fighter, " + "Jennifer Lawrence and Bradley Cooper from Silver Linings Playbook – " + "help him turn the toxic mess of life on the edge into an exhilarating gift."
-	}, {
-		title : "Her",
-		details : "Director Spike Jonze (Being John Malkovich, Adaptation) creates movies that " + "help us see the world in startlingly funny and touching new ways. And in Her, " + "set in the near future, Theodore (a sublime, soulful Joaquin Phoenix) falls hard " + "for his computer operating system (voiced with humor, heat and heart by Scarlett Johansson) " + "and makes us believe it. This is personal filmmaking at its glorious, groundbreaking peak."
-	}, {
-		title : "Before Midnight",
-		details : "Nothing happens as two lovers, Jesse (Ethan Hawke) and Celine (Julie Delpy), " + "continue to climb the Mount Everest of their relationship. In this story's third part, " + "after 1995's Before Sunrise and 2004's Before Sunset, director Richard Linklater and " + "pitch-perfect co-writers Hawke and Delpy create the defining love story of a generation."
-	}, {
-		title : "The Wolf of Wall Street",
-		details : "This three-hour bolt of polarizing brilliance from Martin Scorsese, with a killer script " + "by The Sopranos' Terence Winter, details the true tale of Jordan Belfort " + "(Leonardo DiCaprio flares like a five-alarm fire in full blaze), who lived hoggishly high on securities " + "fraud in the 1990s. Jordan and his co-scumbags (Jonah Hill crushes it as his wingman)" + " numb moral qualms with coke, 'ludes and hookers. Scorsese's high-wire act of bravura " + "filmmaking is a lethally hilarious take on white-collar crime. No one dies, but Wall Street victims" + " will scream bloody murder."
-	}];
+myApp.directive('fileModel', ['$parse', function ($parse) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var model = $parse(attrs.fileModel);
+            var modelSetter = model.assign;
+            element.bind('change', function(){
+                scope.$apply(function(){
+                    modelSetter(scope, element[0].files[0]);
+                });
+            });
+        }
+    };
+}]);
 
-	return {
-		films : films,
-		getFilm : function(index) {
-			return films[index];
-		}
-	};
-
-});
-*/
+/* Loading directive. */
+myApp.directive('routeLoading', [ '$rootScope', '$ionicLoading', function($rootScope, $ionicLoading) {
+    return {
+        restrict: 'E',
+        link: function() {
+            $rootScope.$on('$ionicView.beforeEnter', function(event) {
+                $ionicLoading.show({
+                    template: 'Loading<br/><span class="ion-load-a"></span>'
+                });
+            });
+            $rootScope.$on('$ionicView.afterEnter', function(event) {
+                $ionicLoading.hide();
+            });
+      }
+    };
+}]);
 
 myApp.factory('Camera', ['$q',
 function($q) {
